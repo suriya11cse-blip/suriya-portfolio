@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin · Messages</title>
+<style>
+  body{font-family:system-ui;margin:0;background:#100826;color:#fff3e6}
+  header{padding:20px;background:#1e1046;border-bottom:3px solid #ff3d9a}
+  h1{margin:0;font-size:22px}
+  .wrap{max-width:1000px;margin:0 auto;padding:24px}
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+  .stat{background:#1a0d3a;padding:20px;border-radius:10px;border:2px solid #6b4bd6}
+  .stat b{font-size:32px;display:block;color:#ff3d9a}
+  .msg{background:#1a0d3a;padding:16px;border-radius:10px;margin-bottom:12px;border-left:4px solid #35e0ff}
+  .msg h3{margin:0 0 4px;font-size:17px}
+  .msg .meta{color:#c3b3e6;font-size:13px;margin-bottom:8px}
+  .msg p{margin:0;white-space:pre-wrap}
+  .empty{text-align:center;padding:40px;color:#c3b3e6}
+</style>
+</head>
+<body>
+<header><h1>🎮 Admin · Inbox</h1></header>
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>{{ total }}</b>Total Messages</div>
+    <div class="stat"><b>{{ views }}</b>Page Views</div>
+  </div>
+  {% for m in messages %}
+    <div class="msg">
+      <h3>{{ m.name }} <span style="color:#c3b3e6;font-weight:400">· {{ m.email }}</span></h3>
+      <div class="meta">{% if m.subject %}{{ m.subject }} · {% endif %}{{ m.created_at|date:"M d, Y H:i" }}</div>
+      <p>{{ m.message }}</p>
+    </div>
+  {% empty %}
+    <div class="empty">No messages yet.</div>
+  {% endfor %}
+</div>
+</body>
+</html>

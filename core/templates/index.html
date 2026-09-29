@@ -1,0 +1,358 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suriya S | Software Engineer and UI/UX Designer</title>
+<meta name="description" content="Arcade-style portfolio of Suriya S, a Computer Science graduate from Chennai who builds full-stack web apps, designs interfaces in Figma and trains small AI models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="cup" viewBox="0 0 24 24">
+    <path d="M6 3h12v5a6 6 0 0 1-12 0V3z" fill="currentColor"/>
+    <path d="M6 5H3v2a4 4 0 0 0 4 4M18 5h3v2a4 4 0 0 1-4 4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <rect x="10.5" y="14" width="3" height="4" fill="currentColor"/>
+    <rect x="7" y="18" width="10" height="3" rx="1" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="top-in">
+    <a class="brand" href="#top" aria-label="Suriya S, back to top"><span class="sprite" data-sprite></span>Suriya S</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#player">Player</a>
+      <a href="#games">Games</a>
+      <a href="#journey">Journey</a>
+      <a href="#powerups">Power-ups</a>
+      <a href="#trophies">Trophies</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="mode" id="mode" type="button" aria-pressed="true">Day mode</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- Hero -->
+<div class="hero">
+  <svg class="sky" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="skyg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" style="stop-color:var(--sky1)"/><stop offset="1" style="stop-color:var(--sky2)"/>
+      </linearGradient>
+      <linearGradient id="sung" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" style="stop-color:var(--yellow)"/><stop offset="1" style="stop-color:var(--magenta)"/>
+      </linearGradient>
+      <mask id="sunmask">
+        <rect width="1200" height="380" fill="#fff"/>
+        <rect y="252" width="1200" height="4" fill="#000"/>
+        <rect y="274" width="1200" height="6" fill="#000"/>
+        <rect y="298" width="1200" height="9" fill="#000"/>
+        <rect y="324" width="1200" height="13" fill="#000"/>
+        <rect y="352" width="1200" height="18" fill="#000"/>
+      </mask>
+    </defs>
+    <rect width="1200" height="380" fill="url(#skyg)"/>
+    <g class="stars" fill="#fff3e6">
+      <circle cx="80" cy="40" r="2"/><circle cx="190" cy="90" r="1.5"/><circle cx="300" cy="30" r="2"/>
+      <circle cx="420" cy="70" r="1.5"/><circle cx="540" cy="24" r="2"/><circle cx="640" cy="96" r="1.5"/>
+      <circle cx="760" cy="36" r="2"/><circle cx="1010" cy="56" r="1.5"/><circle cx="1100" cy="100" r="2"/>
+      <circle cx="1160" cy="30" r="1.5"/><circle cx="250" cy="150" r="1.5"/><circle cx="470" cy="140" r="2"/>
+    </g>
+    <circle cx="850" cy="250" r="150" fill="url(#sung)" mask="url(#sunmask)"/>
+    <path d="M0 380 L0 300 L90 250 L160 290 L260 210 L360 285 L430 250 L520 320 L600 290 L700 340 L760 300 L900 330 L980 270 L1080 300 L1150 240 L1200 270 L1200 380 Z" style="fill:var(--mount);stroke:var(--cyan)" stroke-width="2"/>
+  </svg>
+  <div class="floor" aria-hidden="true"><i></i></div>
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <h1>Suriya S</h1>
+      <p class="sub">Software engineer, UI/UX designer and AI enthusiast from Chennai.</p>
+      <div class="row">
+        <a class="btn" href="#games">Press start</a>
+        <a class="btn alt" href="#contact">Say hello</a>
+      </div>
+    </div>
+    <div class="hero-sprite" data-sprite role="img" aria-label="Pixel art portrait of Suriya"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="scores">
+    <div class="score"><b>Published</b><span>Research in the IRE Journal</span></div>
+    <div class="score"><b>2026</b><span>B.E. CSE graduate</span></div>
+    <div class="score"><b>3</b><span>Certifications</span></div>
+    <div class="score"><b>3</b><span>Projects built</span></div>
+  </div>
+</div>
+
+<!-- Player -->
+<section id="player">
+  <div class="wrap">
+    <h2 class="sec-title">Player 1</h2>
+    <p class="sec-intro">Who is playing, and what is in the skill tree.</p>
+    <div class="player">
+      <div class="card portrait">
+        <div class="pframe" id="pframe"><div class="sprite" data-sprite role="img" aria-label="Pixel art portrait of Suriya"></div></div>
+        <h3>Suriya S</h3>
+        <p>Chennai, India</p>
+      </div>
+      <div class="card bio">
+        <p>I am a Computer Science graduate who builds full-stack web apps, designs the interfaces in Figma, and trains small AI models. I have a strong base in OOP and data structures and algorithms, I am comfortable with Git and team workflows, and I pick up new tools quickly.</p>
+        <p>I am looking for a role where I can ship real features and keep learning from a team.</p>
+        <div class="hs">
+          <h3>High scores</h3>
+          <ul id="scores"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Game library -->
+<section id="games">
+  <div class="wrap">
+    <h2 class="sec-title">Game library</h2>
+    <p class="sec-intro">Four projects, each one a cartridge. Hover to pick one up.</p>
+    <div class="library">
+
+      <article class="cart" data-shot="leaf">
+        <div class="cart-body">
+          <div class="art">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a leaf inside an AI scan frame">
+              <defs>
+                <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d3b3a"/><stop offset="1" stop-color="#1b6b55"/></linearGradient>
+                <linearGradient id="lf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7be495"/><stop offset="1" stop-color="#1f9d5a"/></linearGradient>
+              </defs>
+              <rect width="320" height="180" fill="url(#lg1)"/>
+              <path d="M160 26 C238 38 254 112 160 156 C66 112 82 38 160 26 Z" fill="url(#lf)" stroke="#0b3d2a" stroke-width="3"/>
+              <path d="M160 34 L160 168" stroke="#0b3d2a" stroke-width="3" fill="none"/>
+              <g stroke="#0b3d2a" stroke-width="2" fill="none" stroke-linecap="round">
+                <path d="M160 66 L196 48"/><path d="M160 66 L124 48"/>
+                <path d="M160 92 L212 72"/><path d="M160 92 L108 72"/>
+                <path d="M160 118 L204 100"/><path d="M160 118 L116 100"/>
+              </g>
+              <g stroke="#35e0ff" stroke-width="4" fill="none" stroke-linecap="square">
+                <path d="M84 40 V24 H100"/><path d="M236 24 H220 M236 24 V40"/>
+                <path d="M84 142 V158 H100"/><path d="M236 158 H220 M236 158 V142"/>
+              </g>
+              <rect x="84" y="88" width="152" height="3" fill="#35e0ff" opacity=".85"/>
+              <rect x="8" y="8" width="72" height="32" rx="4" fill="#0b1f2a" stroke="#35e0ff" stroke-width="2"/>
+              <text x="15" y="21" font-family="Rubik,sans-serif" font-size="9.5" font-weight="700" fill="#ffffff">Medicinal leaf</text>
+              <rect x="15" y="27" width="58" height="5" fill="#123a44"/><rect x="15" y="27" width="46" height="5" fill="#7be495"/>
+            </svg>
+          </div>
+          <div class="cart-txt">
+            <h3>Medical Leaf Detection</h3>
+            <p class="meta">Deep learning, published in the IRE Journal</p>
+            <p>An AI system built on MobileNetV2 that identifies medicinal plants from leaf images. It supports plant identification for healthcare and herbal medicine.</p>
+            <ul class="tags"><li>MobileNetV2</li><li>Deep learning</li><li>Image classification</li></ul>
+            <span class="flag-pub">Published</span>
+          </div>
+          <div class="pins" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <article class="cart" data-shot="travel">
+        <div class="cart-body">
+          <div class="art">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a city map with a travel route and location pins">
+              <rect width="320" height="180" fill="#e8f3ef"/>
+              <path d="M0 132 C70 112 120 162 200 142 S300 122 320 132 V180 H0Z" fill="#9fd3f0"/>
+              <g fill="#cfe6d6"><rect x="16" y="12" width="66" height="46" rx="6"/><rect x="232" y="16" width="72" height="42" rx="6"/><rect x="20" y="84" width="52" height="32" rx="6"/></g>
+              <g stroke="#cfd8dc" stroke-width="13" fill="none" stroke-linecap="round"><path d="M0 70 H320"/><path d="M110 0 V132"/><path d="M210 0 V116"/></g>
+              <g stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round"><path d="M0 70 H320"/><path d="M110 0 V132"/><path d="M210 0 V116"/></g>
+              <path d="M56 104 L110 70 L210 70 L252 34" stroke="#d4187a" stroke-width="4" stroke-dasharray="8 6" fill="none" stroke-linecap="round"/>
+              <g transform="translate(56,104)"><path d="M0 0 C-14 -16 -14 -34 0 -34 C14 -34 14 -16 0 0 Z" fill="#ff9a3c" stroke="#2a0f4d" stroke-width="2"/><circle cx="0" cy="-22" r="5" fill="#fff"/></g>
+              <g transform="translate(210,70)"><path d="M0 0 C-14 -16 -14 -34 0 -34 C14 -34 14 -16 0 0 Z" fill="#35c0e0" stroke="#2a0f4d" stroke-width="2"/><circle cx="0" cy="-22" r="5" fill="#fff"/></g>
+              <g transform="translate(252,34)"><path d="M0 0 C-14 -16 -14 -34 0 -34 C14 -34 14 -16 0 0 Z" fill="#d4187a" stroke="#2a0f4d" stroke-width="2"/><circle cx="0" cy="-22" r="5" fill="#fff"/></g>
+              <rect x="222" y="98" width="88" height="42" rx="7" fill="#fff" stroke="#2a0f4d" stroke-width="2"/>
+              <rect x="230" y="107" width="52" height="6" rx="3" fill="#2a0f4d"/>
+              <rect x="230" y="119" width="70" height="5" rx="2.5" fill="#c9bfe0"/>
+              <rect x="230" y="129" width="44" height="5" rx="2.5" fill="#c9bfe0"/>
+            </svg>
+          </div>
+          <div class="cart-txt">
+            <h3>Travel Advisory App</h3>
+            <p class="meta">Responsive web app</p>
+            <p>Shows destination details, attractions, hotels, restaurants and location-based recommendations. The interactive map runs on the Leaflet API.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li><li>Leaflet</li></ul>
+          </div>
+          <div class="pins" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <article class="cart" data-shot="fitness">
+        <div class="cart-body">
+          <div class="art">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of two phone wireframes for a fitness and healthcare app">
+              <defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a0f4d"/><stop offset="1" stop-color="#6a1b9a"/></linearGradient></defs>
+              <rect width="320" height="180" fill="url(#fg)"/>
+              <rect x="46" y="16" width="104" height="180" rx="14" fill="#ffffff" stroke="#0f0522" stroke-width="3"/>
+              <rect x="60" y="30" width="52" height="8" rx="4" fill="#d9d2f0"/>
+              <circle cx="98" cy="82" r="24" fill="none" stroke="#e7e2f5" stroke-width="8"/>
+              <circle cx="98" cy="82" r="24" fill="none" stroke="#35c0e0" stroke-width="8" stroke-dasharray="105 151" transform="rotate(-90 98 82)" stroke-linecap="round"/>
+              <path d="M98 92 C86 82 86 72 93 72 C96 72 98 74 98 76 C98 74 100 72 103 72 C110 72 110 82 98 92 Z" fill="#ff3d9a"/>
+              <rect x="60" y="122" width="76" height="11" rx="5" fill="#ece8f8"/>
+              <rect x="60" y="140" width="56" height="11" rx="5" fill="#ece8f8"/>
+              <rect x="170" y="16" width="104" height="180" rx="14" fill="#ffffff" stroke="#0f0522" stroke-width="3"/>
+              <rect x="184" y="30" width="40" height="8" rx="4" fill="#d9d2f0"/>
+              <g fill="#35e0ff"><rect x="186" y="96" width="12" height="26" rx="2"/><rect x="204" y="78" width="12" height="44" rx="2"/><rect x="222" y="60" width="12" height="62" rx="2"/><rect x="240" y="86" width="12" height="36" rx="2"/></g>
+              <rect x="186" y="122" width="66" height="3" fill="#c9bfe0"/>
+              <rect x="186" y="136" width="68" height="16" rx="8" fill="#ff9a3c"/>
+              <circle cx="292" cy="30" r="6" fill="#ffd23f"/><circle cx="22" cy="150" r="4" fill="#ff3d9a"/>
+            </svg>
+          </div>
+          <div class="cart-txt">
+            <h3>Fitness and Healthcare App Design</h3>
+            <p class="meta">UI/UX Designer Intern, Nov 2024 to Dec 2024</p>
+            <p>Wireframes and user flows for a fitness and healthcare web app, designed in Figma and Adobe XD with consistent typography, colors, icons and branding.</p>
+            <ul class="tags"><li>Figma</li><li>Adobe XD</li><li>Wireframes</li><li>User flows</li></ul>
+          </div>
+          <div class="pins" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <article class="cart" data-shot="figma">
+        <div class="cart-body">
+          <div class="art">
+            <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a Figma design board with color swatches and a collaborator cursor">
+              <defs><pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#b9acf0"/></pattern></defs>
+              <rect width="320" height="180" fill="#f4f0ff"/><rect width="320" height="180" fill="url(#dots)"/>
+              <rect x="22" y="22" width="116" height="136" rx="6" fill="#fff" stroke="#a58cff" stroke-width="2"/>
+              <g><circle cx="46" cy="50" r="12" fill="#ff3d9a"/><circle cx="76" cy="50" r="12" fill="#35e0ff"/><circle cx="106" cy="50" r="12" fill="#ffd23f"/><circle cx="46" cy="82" r="12" fill="#2a0f4d"/></g>
+              <text x="70" y="112" font-family="Rubik,sans-serif" font-size="30" font-weight="700" fill="#2a0f4d">Aa</text>
+              <rect x="34" y="124" width="84" height="6" rx="3" fill="#d9d2f0"/><rect x="34" y="136" width="60" height="6" rx="3" fill="#d9d2f0"/>
+              <rect x="158" y="40" width="140" height="102" rx="6" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+              <rect x="170" y="52" width="70" height="10" rx="5" fill="#2a0f4d"/>
+              <rect x="170" y="70" width="116" height="30" rx="6" fill="#ede7ff"/>
+              <rect x="170" y="110" width="50" height="20" rx="10" fill="#ff3d9a"/><rect x="228" y="110" width="50" height="20" rx="10" fill="#d9d2f0"/>
+              <g fill="#fff" stroke="#3b82f6" stroke-width="2"><rect x="154" y="36" width="8" height="8"/><rect x="294" y="36" width="8" height="8"/><rect x="154" y="138" width="8" height="8"/><rect x="294" y="138" width="8" height="8"/></g>
+              <path d="M262 118 L262 150 L270 143 L276 156 L281 154 L275 141 L285 141 Z" fill="#ff3d9a" stroke="#fff" stroke-width="1.5"/>
+              <rect x="278" y="152" width="34" height="16" rx="8" fill="#ff3d9a"/>
+              <text x="285" y="164" font-family="Rubik,sans-serif" font-size="9" font-weight="700" fill="#fff">Suriya</text>
+            </svg>
+          </div>
+          <div class="cart-txt">
+            <h3>UI/UX Design in Figma</h3>
+            <p class="meta">Prototypes and design thinking</p>
+            <p>User-centric interfaces designed and prototyped in Figma, and shared through my portfolio and LinkedIn.</p>
+            <ul class="tags"><li>Figma</li><li>Prototyping</li><li>Usability</li><li>Design thinking</li></ul>
+          </div>
+          <div class="pins" aria-hidden="true"></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Save slots -->
+<section id="journey">
+  <div class="wrap">
+    <h2 class="sec-title">Save slots</h2>
+    <p class="sec-intro">Three saved games that made me the developer I am today.</p>
+    <div class="slots">
+      <div class="card slot">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 L1.5 9 L12 15 L22.5 9 Z"/><path d="M5 12.5 V17 C5 19 8.5 20.5 12 20.5 C15.5 20.5 19 19 19 17 V12.5 L12 16.5 Z"/></svg>
+        </div>
+        <div>
+          <h3>Slot 1: College</h3>
+          <p class="meta">B.E. Computer Science and Engineering, Velammal Engineering College, Chennai, 2022 to 2026</p>
+          <p>CGPA 7.87. This is where I built the base: OOP, data structures and algorithms, databases and full-stack web development.</p>
+          <p>Earlier levels: HSC 84.16% (2022) and SSLC 72.2% (2020), both at S.N.R Higher Secondary School.</p>
+        </div>
+      </div>
+      <div class="card slot">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 18 H22 L21 20 H3 Z"/></svg>
+        </div>
+        <div>
+          <h3>Slot 2: Web development training</h3>
+          <p class="meta">Uniq Technologies, June 2024</p>
+          <p>Hands-on front-end work with HTML, CSS and JavaScript. I learned responsive design and how to structure a web project.</p>
+        </div>
+      </div>
+      <div class="card slot">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25 V21 H6.75 L18.5 9.25 L14.75 5.5 Z"/><path d="M20.7 7 C21.1 6.6 21.1 6 20.7 5.6 L18.4 3.3 C18 2.9 17.4 2.9 17 3.3 L15.8 4.5 L19.5 8.2 Z"/></svg>
+        </div>
+        <div>
+          <h3>Slot 3: UI/UX design internship</h3>
+          <p class="meta">UI/UX Designer Intern, Nov 2024 to Dec 2024</p>
+          <p>Designed wireframes and user flows for a fitness and healthcare web app. I applied UX principles and kept the visual style consistent so the app was easier to use and navigate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Power-ups -->
+<section id="powerups">
+  <div class="wrap">
+    <h2 class="sec-title">Power-ups</h2>
+    <p class="sec-intro">The languages, frameworks and tools I use every day.</p>
+    <div class="pu">
+      <div class="card"><h3>Languages</h3><ul class="chips g1"><li>Java</li><li>Python</li><li>JavaScript</li></ul></div>
+      <div class="card"><h3>Web</h3><ul class="chips g2"><li>HTML</li><li>CSS</li><li>React</li><li>Node.js</li><li>Bootstrap</li></ul></div>
+      <div class="card"><h3>Databases</h3><ul class="chips g3"><li>SQL</li><li>MongoDB</li></ul></div>
+      <div class="card"><h3>Design</h3><ul class="chips g4"><li>Figma</li><li>Adobe XD</li><li>Canva</li><li>Photoshop</li><li>Illustrator</li><li>CorelDRAW</li></ul></div>
+      <div class="card"><h3>Dev tools</h3><ul class="chips g5"><li>Git</li><li>VS Code</li></ul></div>
+      <div class="card"><h3>Core concepts</h3><ul class="chips g1"><li>OOP</li><li>DSA</li><li>Full-stack development</li><li>UI/UX design</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- Trophies -->
+<section id="trophies">
+  <div class="wrap">
+    <h2 class="sec-title">Trophy room</h2>
+    <p class="sec-intro">Publications and certifications I have earned.</p>
+    <div class="trophies">
+      <div class="card trophy t1"><svg aria-hidden="true"><use href="#cup"/></svg><h3>Published researcher</h3><p>Medical Leaf Detection using MobileNetV2, published in the IRE Journal.</p></div>
+      <div class="card trophy t2"><svg aria-hidden="true"><use href="#cup"/></svg><h3>Google UX Design</h3><p>Professional certificate from Coursera.</p></div>
+      <div class="card trophy t3"><svg aria-hidden="true"><use href="#cup"/></svg><h3>SQL and Python Basics</h3><p>Course certificate from GreatLearning.</p></div>
+      <div class="card trophy t4"><svg aria-hidden="true"><use href="#cup"/></svg><h3>Web Designing</h3><p>HTML, CSS and JS course on Udemy.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="wrap">
+    <div class="card contact">
+      <h2>Continue?</h2>
+      <p>I am open to software engineering and UI/UX roles. Send me a message and I will get back to you soon.</p>
+
+      <form id="contactForm" style="max-width: 560px; margin-top: 24px;">
+        {% csrf_token %}
+        <div style="display: grid; gap: 14px;">
+          <input name="name" required placeholder="Your name" style="padding:14px;border-radius:10px;border:3px solid var(--line);background:var(--panel);color:var(--ink);font-family:inherit;font-size:16px;">
+          <input name="email" type="email" required placeholder="Your email" style="padding:14px;border-radius:10px;border:3px solid var(--line);background:var(--panel);color:var(--ink);font-family:inherit;font-size:16px;">
+          <input name="subject" placeholder="Subject (optional)" style="padding:14px;border-radius:10px;border:3px solid var(--line);background:var(--panel);color:var(--ink);font-family:inherit;font-size:16px;">
+          <textarea name="message" required rows="5" placeholder="Your message..." style="padding:14px;border-radius:10px;border:3px solid var(--line);background:var(--panel);color:var(--ink);font-family:inherit;font-size:16px;resize:vertical;"></textarea>
+          <button type="submit" class="btn" id="sendBtn">Send message</button>
+          <p id="formStatus" style="font-weight:500;"></p>
+        </div>
+      </form>
+
+      <div class="row" style="margin-top: 24px;">
+        <a class="btn alt" data-link="email" href="#" hidden>Email me</a>
+        <a class="btn alt" data-link="phone" href="#" hidden>Call me</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">Designed and built by Suriya S in Chennai.</div></footer>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

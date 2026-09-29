@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Login</title>
+<style>
+  body{font-family:system-ui;background:#100826;color:#fff3e6;display:grid;place-items:center;min-height:100vh;margin:0}
+  .box{background:#1e1046;padding:32px;border-radius:14px;border:3px solid #6b4bd6;max-width:400px;width:90%}
+  h1{margin:0 0 20px;font-size:22px}
+  input{width:100%;padding:12px;border-radius:8px;border:2px solid #6b4bd6;background:#100826;color:#fff3e6;font-size:16px;box-sizing:border-box;margin-bottom:14px}
+  button{width:100%;padding:12px;background:#ff3d9a;color:#1a0a3d;border:none;border-radius:8px;font-weight:700;font-size:16px;cursor:pointer}
+  .err{color:#ff3d9a;margin-top:12px}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>🎮 Admin Login</h1>
+  <form method="get">
+    <input name="token" type="password" placeholder="Enter admin token..." required autofocus>
+    <button type="submit">Login</button>
+  </form>
+  {% if error %}<p class="err">❌ {{ error }}</p>{% endif %}
+</div>
+</body>
+</html>
