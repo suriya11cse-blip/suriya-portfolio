@@ -124,3 +124,20 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Custom: Admin token from .env
 ADMIN_TOKEN = os.getenv('ADMIN_TOKEN', 'admin123')
+# ============================================
+# Production settings (Render.com)
+# ============================================
+import dj_database_url
+
+if not DEBUG:
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
+            conn_max_age=600,
+        )
+    }
+
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+CSRF_TRUSTED_ORIGINS = ['https://*.onrender.com']
